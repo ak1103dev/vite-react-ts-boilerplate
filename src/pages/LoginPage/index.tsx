@@ -1,6 +1,14 @@
 import Button from '../../components/Button'
 import Form from '../../components/Form'
 import FormItem from '../../components/Form/FormItem'
+import * as yup from 'yup'
+
+const schema = yup
+  .object({
+    username: yup.string().required('Please input your username'),
+    password: yup.string().required('Please input your password'),
+  })
+  .required()
 
 const LoginPage = () => {
   const onLogin = (data: any) => {
@@ -11,7 +19,7 @@ const LoginPage = () => {
     }
   }
   return (
-    <Form onSubmit={onLogin}>
+    <Form onSubmit={onLogin} schema={schema}>
       <FormItem name="username">
         <input />
       </FormItem>

@@ -10,10 +10,12 @@
     "pre-commit": "yarn lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.8.10",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-hook-form": "^7.31.3",
-    "react-router-dom": "^6.0.1"
+    "react-router-dom": "^6.0.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",

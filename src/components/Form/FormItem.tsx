@@ -13,7 +13,9 @@ const FormItem = ({ children, name }: Props) => {
     <div>
       {React.cloneElement(children, { ...methods.register(name) })}
       {methods.formState.errors[name] && (
-        <div>{methods.formState.errors[name]?.message}</div>
+        <div style={{ color: 'red' }}>
+          {methods.formState.errors[name]?.message}
+        </div>
       )}
     </div>
   )
