@@ -8,6 +8,7 @@ interface Props {
 
 const FormItem = ({ children, name }: Props) => {
   const methods = useFormContext()
+  console.log({ methods })
 
   return (
     <div>

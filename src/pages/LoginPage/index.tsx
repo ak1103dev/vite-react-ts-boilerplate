@@ -3,6 +3,7 @@ import Form from '../../components/Form'
 import FormItem from '../../components/Form/FormItem'
 import * as yup from 'yup'
 import { useNavigate } from 'react-router-dom'
+import Input from '../../components/Input'
 
 const schema = yup
   .object({
@@ -28,7 +29,7 @@ const LoginPage = () => {
         <input />
       </FormItem>
       <FormItem name="password">
-        <input type="password" />
+        <Input type="password" />
       </FormItem>
       <Button type="submit">Login</Button>
     </Form>
