@@ -26,7 +26,7 @@ const LoginPage = () => {
   return (
     <Form onSubmit={onLogin} schema={schema}>
       <FormItem name="username">
-        <input />
+        <Input />
       </FormItem>
       <FormItem name="password">
         <Input type="password" />

@@ -8,10 +8,9 @@ interface Props {
 
 const FormItem = ({ children, name }: Props) => {
   const methods = useFormContext()
-  console.log({ methods })
 
   return (
-    <div>
+    <div className="my-2">
       {React.cloneElement(children, { ...methods.register(name) })}
       {methods.formState.errors[name] && (
         <div style={{ color: 'red' }}>

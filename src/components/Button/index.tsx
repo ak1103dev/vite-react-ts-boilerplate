@@ -6,7 +6,14 @@ interface Props {
 }
 
 const Button = ({ children, ...props }: Props) => {
-  return <button {...props}>{children}</button>
+  return (
+    <button
+      {...props}
+      className="bg-blue-800 hover:bg-blue-500 text-white rounded p-2"
+    >
+      {children}
+    </button>
+  )
 }
 
 export default Button

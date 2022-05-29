@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 
 const DashboardLayout = () => {
   return (
-    <div style={{ display: 'flex' }}>
+    <div className="flex space-x-2">
       <ul>
         <li>abc</li>
         <li>abc</li>
