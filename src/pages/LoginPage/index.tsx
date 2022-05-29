@@ -2,6 +2,7 @@ import Button from '../../components/Button'
 import Form from '../../components/Form'
 import FormItem from '../../components/Form/FormItem'
 import * as yup from 'yup'
+import { useNavigate } from 'react-router-dom'
 
 const schema = yup
   .object({
@@ -11,9 +12,12 @@ const schema = yup
   .required()
 
 const LoginPage = () => {
+  const navigate = useNavigate()
+
   const onLogin = (data: any) => {
     if (data.username === 'admin' && data.password === 'nimda') {
       alert('login success')
+      navigate('/dashboard')
     } else {
       alert('login failed')
     }
